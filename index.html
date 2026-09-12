@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Luyando ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff7aa8, #ffd6e5);
+      color: #4a1f30;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box {
+      background: white;
+      width: 85%;
+      max-width: 450px;
+      padding: 30px 20px;
+      border-radius: 30px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    .heart {
+      font-size: 60px;
+      animation: beat 1s infinite;
+    }
+
+    @keyframes beat {
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    h1 {
+      color: #e52d68;
+    }
+
+    button {
+      border: none;
+      background: #e52d68;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-size: 17px;
+      margin: 8px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .letter {
+      background: #fff1f6;
+      padding: 20px;
+      border-radius: 20px;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    textarea {
+      width: 90%;
+      height: 80px;
+      border: 2px solid #ffc4d8;
+      border-radius: 15px;
+      padding: 10px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box" id="page1">
+  <div class="heart">💌</div>
+
+  <h1>Hey Luyando ❤️</h1>
+
+  <p>I made something little for you. 🥹</p>
+
+  <p>Open it when you're ready...</p>
+
+  <button onclick="next(2)">
+    Open ❤️
+  </button>
+</div>
+
+
+<div class="box hidden" id="page2">
+
+  <div class="heart">❤️</div>
+
+  <h1>Question 1</h1>
+
+  <h2>Do you love me? 🥹</h2>
+
+  <button onclick="next(3)">
+    YES ❤️
+  </button>
+
+  <button onclick="next(3)">
+    Obviously 😂
+  </button>
+
+</div>
+
+
+<div class="box hidden" id="page3">
+
+  <div class="heart">🥹</div>
+
+  <h1>Question 2</h1>
+
+  <h2>What was your first impression of me?</h2>
+
+  <textarea placeholder="Be honest 👀"></textarea>
+
+  <br><br>
+
+  <button onclick="next(4)">
+    Next ❤️
+  </button>
+
+</div>
+
+
+<div class="box hidden" id="page4">
+
+  <div class="heart">🫶🏽</div>
+
+  <h1>Question 3</h1>
+
+  <h2>What's your favorite memory with me so far?</h2>
+
+  <textarea placeholder="Tell me... ❤️"></textarea>
+
+  <br><br>
+
+  <button onclick="next(5)">
+    Continue 💗
+  </button>
+
+</div>
+
+
+<div class="box hidden" id="page5">
+
+  <div class="heart">💌</div>
+
+  <h1>A little letter for you</h1>
+
+  <div class="letter">
+
+    <p><b>Dear Luyando,</b></p>
+
+    <p>
+      I know we've only been together for a week,
+      but you've already become someone really special to me. ❤️
+    </p>
+
+    <p>
+      I love talking to you, getting to know you,
+      and making little memories together.
+    </p>
+
+    <p>
+      I don't want to rush anything.
+      I just want us to enjoy what we have
+      and see where this journey takes us.
+    </p>
+
+    <p>
+      I'm really happy you're my girl. 🥹❤️
+    </p>
+
+    <p>
+      <b>Thank you for being you. ❤️</b>
+    </p>
+
+  </div>
+
+  <button onclick="next(6)">
+    One last thing ❤️
+  </button>
+
+</div>
+
+
+<div class="box hidden" id="page6">
+
+  <div class="heart">🌹</div>
+
+  <h1>Luyando ❤️</h1>
+
+  <h2>Will you keep making memories with me?</h2>
+
+  <button onclick="next(7)">
+    YESSS 😭❤️
+  </button>
+
+  <button onclick="next(7)">
+    Obviously ❤️
+  </button>
+
+</div>
+
+
+<div class="box hidden" id="page7">
+
+  <div class="heart">❤️‍🔥</div>
+
+  <h1>I Love You, Luyando</h1>
+
+  <p style="font-size:20px;">
+    It's only been a week,
+    but I'm really happy you're in my life.
+  </p>
+
+  <p style="font-size:25px;">
+    <b>I love you very much. 🥹❤️</b>
+  </p>
+
+  <p>
+    Here's to all the memories we're
+    still going to make. 🫶🏽
+  </p>
+
+</div>
+
+
+<script>
+
+function next(number) {
+
+  document.querySelectorAll(".box").forEach(function(page) {
+    page.classList.add("hidden");
+  });
+
+  document.getElementById("page" + number)
+    .classList.remove("hidden");
+
+}
+
+</script>
+
+</body>
+</html>
